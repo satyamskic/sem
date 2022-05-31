@@ -19,25 +19,29 @@ for(i=0;i<strlen(msg);i++)
 
 for(i=0;i<3;i++)
 {
-    t=0;
-for(j=0;j<3;j++)
-{
-  t=t+(a[i][j]*c[j]);
+   t=0;
+   for(j=0;j<3;j++)
+   {
+     t=t+(a[i][j]*c[j]);
+   }
+   d[i]=t%26;
 }
- d[i]=t%26;
-}
+
 printf("\nEncrypted Cipher Text :");
+
 for(i=0;i<3;i++)
 printf(" %c",d[i]+65);
+
 for(i=0;i<3;i++)
-   {
+ {
   t=0;
   for(j=0;j<3;j++)
- {
-  t=t+(b[i][j]*d[j]);
+  {
+    t=t+(b[i][j]*d[j]);
+  }
+  c[i]=t%26;
 }
-c[i]=t%26;
-}
+
 printf("\nDecrypted Cipher Text :");for(i=0;i<3;i++)
 printf(" %c",c[i]+65);
 
